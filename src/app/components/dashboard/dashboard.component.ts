@@ -9,6 +9,7 @@ export class DashboardComponent implements OnInit {
   users:any
   countBasic:any
   countAdvance:any
+  
 
   constructor() { }
   ngOnInit() {
@@ -22,13 +23,13 @@ export class DashboardComponent implements OnInit {
       url: "http://fundoonotes.incubation.bridgelabz.com/api/user/getAdminUserList",
       type: 'GET',
       dataType: "json",
-      success: function (response) {
+      success:  (response)=> {
         this.users=response.data.data;
 
         var data_users='';
-        $.each(this.users,function (key,value) {
+        $.each(this.users, (key,value)=> {
           data_users+='<tr>';
-          // data_users+='<td>'+key+'</td>';
+          // data_users+='<td>'+ key +'</td>';
           data_users+='<td>'+value.firstName+'</td>';
           data_users+='<td>'+value.lastName+'</td>';
           data_users+='<td>'+value.email+'</td>';
