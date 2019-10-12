@@ -18,17 +18,17 @@
 </div>
 </form>
  -->
- <form action class="was-validated">
+ <form action class="was-validated" >
   <div class="form-group" class="container">
     <label for="email">Email address:</label>
-    <input type="text" class="form-control" id="email" placeholder="Enter username" value="Mickey Mouse" name="uname" required>
+    <input type="email" class="form-control" id="email" placeholder="Enter username"  required>
     <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
   </div>
   <div class="form-group" class="container">
     <label for="pwd">Password:</label>
-    <input type="password" class="form-control" id="pwd"  placeholder="Enter password" name="pswd" required>
+    <input type="password" class="form-control" id="pwd"  placeholder="Enter password"  required>
     <div class="valid-feedback">Valid.</div>
     <div class="invalid-feedback">Please fill out this field.</div>
   </div>
@@ -38,7 +38,7 @@
     </label>
   </div> -->
   <div class="container">
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" id="adminLogin" class="btn btn-primary" (click)='onlogin()'>Submit</button>
   </div>
  
 </form>
