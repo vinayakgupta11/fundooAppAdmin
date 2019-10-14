@@ -1,62 +1,70 @@
-
-<nav class="navbar navbar-expand-sm bg-light navbar-light">
-  <!-- Brand/logo -->
-  <a  id ="adminLogin" class="navbar-brand" href="#" (click)=getList()>Fundoo-Notes</a>
-  
-  <!-- Links -->
+<nav class="navbar navbar-expand-sm bg-light navbar-light" >
+ 
+  <a  class="navbar-brand" >Fundoo-Notes</a>
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#">Link 1</a>
+      <a class="nav-link" >Unapproved-Answers</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link 2</a>
+      <a class="nav-link" id='adminLogin' href="#" (click)='getList()'>User-List</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link 3</a>
+      <a class="nav-link">Orders</a>
     </li>
   </ul>
+  <button class="btn btn-success" style="margin-left: 700px" type="submit" (click)='Logout()'>Logout</button>
 </nav>
 
+    
+  
+
 <div class="container" style="margin-left: 260px">
-<div class="row "  style="margin-top: 50px">
+  <div class="row " style="margin-top: 50px">
     <div class="col-sm-4">
-    <div class="card">
-    <div class="card-body">
-    <h5 class="card-title">Advance Users</h5>
-    <p class="card-text" id="AdvanceData"></p>
+      <div class="card" class="exampleA" (click)='advance()' style="cursor: pointer">
+        <div class="card-body">
+          <h5 class="card-title">Advance Users</h5>
+          <p class="card-text" id="AdvanceData"></p>
+        </div>
+      </div>
     </div>
-    </div>
-    </div>
+
+    <div class="col-sm-4"  >
+      
+      <div class="card" class="exampleB" (click)='basic()'>
+        <div class="card-body">
+          <h5 class="card-title">Basic Users</h5>
+          <p class="card-text" id="BasicData"></p>
+        </div>
+      </div>
     
-    <div class="col-sm-4">
-    <div class="card">
-    <div class="card-body">
-    <h5 class="card-title">Basic Users</h5>
-    <p class="card-text" id="BasicData"></p>
-    </div>
-    </div>
-    </div>
     </div>
   </div>
-  <div class="container mt-3">
-    
-    <input class="form-control" id="myInput" type="text" placeholder="Search..">
-    <br>
-  </div>
+</div>
+<div class="container mt-3">
+
+  <input class="form-control" id="myInput" type="text" placeholder="Search.." (click)='search()'>
+  <br>
+</div>
 <div class='container-fluid'>
   <div clas="table-responsive">
-    
-    
+
+
     <table class="table table-bordered table-striped " id="data_table">
-      <tr>
-        <!-- <th>index</th> -->
-        
-        <th>FirstName</th>
-        <th>LastName</th>
-        <th>Email</th>
-        <th>Service</th>
-      </tr>
+      <thead>
+        <tr style="background-color: burlywood">
+            <!-- <th>#</th> -->
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Service</th>
+        </tr>
+      </thead>
+      <tbody id="comp">
+       
+      </tbody>
     </table>
 
   </div>
+  
 </div>

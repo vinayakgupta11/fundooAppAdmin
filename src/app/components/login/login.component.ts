@@ -18,9 +18,9 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
    
 
-    $("#adminLogin").click(function (e) {
-      e.preventDefault();
-    });
+    // $("#adminLogin").click(function (e) {
+    //   e.preventDefault();
+    // });
   }
   
   onlogin() {
