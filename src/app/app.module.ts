@@ -8,13 +8,20 @@ import { LoginComponent } from '../app//components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AuthGuard } from './auth-guard/auth.guard';
 import { AuthService } from './services/auth.service';
+import { UnapprovedAnsComponent } from './components/unapproved-ans/unapproved-ans.component';
+
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    DashboardComponent
+    DashboardComponent,
+    UnapprovedAnsComponent,
+   
+    
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,8 @@
 <nav class="navbar navbar-expand-sm bg-light navbar-light" >
- 
   <a  class="navbar-brand" >Fundoo-Notes</a>
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" >Unapproved-Answers</a>
+      <button class="nav-link" id='ansList' (click)='NavigateToAns()'>Unapproved-Answers</button>
     </li>
     <li class="nav-item">
       <a class="nav-link" id='adminLogin' href="#" (click)='getList()'>User-List</a>
@@ -15,13 +14,10 @@
   <button class="btn btn-success" style="margin-left: 700px" type="submit" (click)='Logout()'>Logout</button>
 </nav>
 
-    
-  
-
 <div class="container" style="margin-left: 260px">
   <div class="row " style="margin-top: 50px">
     <div class="col-sm-4">
-      <div class="card" class="exampleA" (click)='advance()' style="cursor: pointer">
+      <div class="card" class="exampleA"  style="cursor: pointer">
         <div class="card-body">
           <h5 class="card-title">Advance Users</h5>
           <p class="card-text" id="AdvanceData"></p>
@@ -31,7 +27,7 @@
 
     <div class="col-sm-4"  >
       
-      <div class="card" class="exampleB" (click)='basic()'>
+      <div class="card" class="exampleB" >
         <div class="card-body">
           <h5 class="card-title">Basic Users</h5>
           <p class="card-text" id="BasicData"></p>
